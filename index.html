@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <title></title>
@@ -7,17 +7,36 @@
         <script src="js/uikit.min.js"></script>
         <!-- Autocomplete CSS -->
         <link rel="stylesheet" href="css/components/autocomplete.css">
+		<link rel="stylesheet" href="css/components/notify.css">
         <!-- Autocomplete Javascript -->
         <script src="js/components/autocomplete.js"></script>
         <script src="js/components/grid-parallax.js"></script>		
 		<script src="js/components/sticky.js"></script>
+		<script src="js/components/notify.js"></script>
     </head>
     <body bgcolor="#D1EEEE">
-	<!-- 这是用来触发抽屉式边栏的按钮 -->
-	<button class="uk-button uk-button-primary" data-uk-offcanvas="{target:'#my-id'}">导航</button>
+	
+	<!-- 按钮组 -->
+	<div class="uk-grid uk-grid-width-*"  data-uk-sticky>
+	    	<!-- 这是用来触发抽屉式边栏的按钮 -->
+	    <div class="uk-width-1-2">
+	        <button class="uk-button uk-button-primary" data-uk-offcanvas="{target:'#my-id1'}">导航</button>
+	    </div>
+	
+	    <!-- 招募 --> 
+	    <div class="uk-width-1-2">
+	        <button class="uk-button uk-button-danger  uk-float-right"  onclick="UIkit.notify('请务必确保您拥有星际公民游戏的资格',{pos:'bottom-center'});
+" data-uk-modal="{target:'#my-id2'}" a href="#my-id">Join us</button>
+	    </div>
+    </div>
+	
+	<!-- 背景 -->
+	<div class="uk-cover-background uk-grid data-uk-gridparallax">
+	    <img src="img/150601104514-2.jpg"/>
+	</div>
 	
 	<!-- 抽屉式边栏 -->
-	<div id="my-id" class="uk-offcanvas">
+	<div id="my-id1" class="uk-offcanvas">
 	    
 
 		<div class="uk-offcanvas-bar">
@@ -35,10 +54,25 @@
         </div>
 	</div>
 	
-	
-	<!-- 背景 -->
-	<div class="uk-cover-background uk-grid data-uk-gridparallax">
-	    <img src="img/150601104514-2.jpg"/>
-	</div>
+	<!-- 模态对话框 -->
+<div id="my-id2" class="uk-modal uk-text-center">
+    <div class="uk-modal-dialog uk-container-center uk-visible-hover">
+        <a class="uk-modal-close uk-close"></a>
+		<a href="https://robertsspaceindustries.com/orgs/GET">戳我OUO</a><div class="uk-hidden"><em><s>不要戳奇怪的地方哦</s></em></div>
+		<div class="uk-overflow-container uk-scrollable-text"><mark>
+		<i class="uk-h3">History</i>
+		<br>
+History the knights 是原 imperator（皇帝—— 伊凡·梅塞尔）麾下。<br>
+AD2541 伊德里斯IV之战崭露头角伊凡·梅塞尔中校手中的菁英小队——骑士小队<br>
+在战场之上兵锋所指所向睥睨，屡立奇功。<br>
+AD2546 伊凡·梅塞尔称帝，建立UEE骑士团，骑士小队得到大量人员与装备补充，其主要核心成员成为这支菁英部队的直属指挥官。<br>
+AD2603—2610 第二次铁法人战争，骑士团参战，骑士团一往无前，最终获得战役的胜利，在这近50年的时光里骑士团逐渐进入公众视野并视为英雄及菁英的代名词。<br>
+AD2638 骑士团精锐抽调至Advocacy(调查局），追捕纪雅桑（音译），纪雅桑下落成迷，小队精锐损失惨重。在追捕过程中遭遇不明势力舰队袭击，有报告称敌方参战机体体表呈暗红色，且可变形。我们有理由怀疑是xian帝国搞的鬼。骑士团小队部分重伤成员退役。<br>
+AD2715—2789 骑士团后代不断加入其中增添新鲜的血液，骑士团出现在战场上的任何需要的地方。<br>
+AD2792 皇帝被推翻，被认为是亲皇派的骑士团被派往帝国边疆。在不断的与外族的战争之中，骑士团损失惨重但帝国早已抛弃了他们切断了给养，而他们同时也不知所踪。<br>
+AD2944 沉默了152年的之后的骑士团逐渐淡出人们的视野。随着帝国江河日下，内忧外患之下，骑士团的主要成员决定重组骑士团，并改名为梦想骑士团，重新招纳人手。这次骑士团不再效忠于任何人，向自己的心中的梦前进。继承骑士团的荣耀，继续谱写骑士团的新篇章！<br> 
+		</mark></div>
+    </div>
+</div>
 	</body>
 </html>
